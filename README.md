@@ -71,7 +71,7 @@ Below are some of the factors which I think can affect the Loan Approval ,depend
 - We have similar features in the test dataset as the training dataset except for the Loan_Status. We will predict the Loan_Status using the model built using the train data. Given below is the description for each variable.
 - The dataset which we are working on is an Imbalanced dataset, we will try to tackle this problem also.
 
-### About the Dataset
+### Data Analysis
 Let's explore these features
 
 **Loan_ID**
