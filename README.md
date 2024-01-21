@@ -244,7 +244,7 @@ Let's explore these features
 
 
 ## Conclusion
-We have build a Random Forest classifier that performs well with the selected features such as Gender,Married,Dependents,Education,Self_Employed, Credit_History,Property_Area,LoanAmount_log,Total_Income_log,Emi,Balance Income.
+We have build a Random Forest classifier that performs well with the selected features such as Gender,Married,Dependents,Education,Self_Employed, Credit_History,Property_Area,LoanAmount_log,Total_Income_log,Emi,Balance Income. Giving **89% accuracy**.
 
 
 
