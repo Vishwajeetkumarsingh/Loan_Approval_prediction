@@ -3,7 +3,10 @@
 
 ## Loan Approval Prediction
 
-<div align="center"><img src="C:\data science\python\images\images.jpeg" height="200" width="200"></div>
+<p align="center">
+  <img src="images/images.jpeg" width="80%" />
+</p>
+
 
 ## Table of Content
 
@@ -19,20 +22,8 @@
     - [Model Performance](#model-performance)
     - [Test Data Prediction](#test-data-prediction)
  - [Conclusion](#conclusion)
-## Table of Content
 
-- [Problem statement](#problem-statement)
-- [Introduction](#introduction)
-- [Motivation](#motivation)
-- [Project Explanation](#project-explanation)
-    - [Data Collection](#data-collection)
-    - [Hypothesis Generation](#hypothesis-generation)
-    - [About the Dataset](#about-the-dataset)
-    - [Data Analysis](#data-analysis)
-    - [Feature Creation](#feature-creation)
-    - [Model Performance](#model-performance)
-    - [Test Data Prediction](#test-data-prediction)
- - [Conclusion](#conclusion)
+
 ## problem statement
 
 Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer’s eligibility for a loan. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling out the online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History, and others. To automate this process, they have given a problem to identify the customer segments, that are eligible for loan amounts so that they can specifically target these customers.
@@ -42,6 +33,11 @@ Dream Housing Finance company deals in all home loans. They have a presence acro
 -	The bank will decide whether to give a loan for the applicant based on some factors such as Applicant Income, Loan Amount, previous Credit History, Co-applicant Income, etc..,
 -	Our goal is to build a Machine Learning Model to predict the loan to be approved or to be rejected for an applicant.
 -	In this project, we are going to classify an individual whether he/she can get the loan amount based on his/her Income, Education, Working Experience, Loan which is taken previously, and many more factors.
+
+<p align="center">
+  <img src="images/download.jpeg" width="80%" />
+</p>
+
 
 ## Motivation
 
@@ -76,7 +72,7 @@ Below are some of the factors which I think can affect the Loan Approval ,depend
 - We have similar features in the test dataset as the training dataset except for the Loan_Status. We will predict the Loan_Status using the model built using the train data. Given below is the description for each variable.
 - The dataset which we are working on is an Imbalanced dataset, we will try to tackle this problem also.
 
-### Project Explanation
+### About the Dataset
 Let's explore these features
 
 **Loan_ID**
@@ -90,9 +86,11 @@ Let's explore these features
 - 81.4% of Applicants are male and 16% are female
 - It can be inferred that the proportion of male and female applicants is more or less the same for both approved and unapproved loans.
 
+<p align="center">
+  <img src="images/male_female.png" width="45%" />
+  <img src="images/male_female_countplot.png" width="45%" />
+</p>
 
-Image(male_female_countplot)
-Image(male_female)
 
 **Married**
 - Since there are only 2 kind of values are possible to be present in this feature which is married or not married. This is a binary kind of qualitative data.
@@ -101,8 +99,11 @@ Image(male_female)
 - 65% of the applicants applying for loan are married
 - The proportion of married applicants is higher for the approved loans.
 
-Image()
-Image(married-loan)
+<p align="center">
+  <img src="images/married_countplot.png" width="45%" />
+  <img src="images/married-loan.png" width="45%" />
+</p>
+
 
 **Dependents**
 - The Dependents feature is a discrete kind of quantitative data.
@@ -112,8 +113,12 @@ Image(married-loan)
 - Most of the applicants don’t have dependents.
 - The distribution of applicants with 1 or 3+ dependents is similar across both the categories of Loan_Status, Approved or Declined.
 
-Image(depent_countplot)
-Image(dependent-loan)
+<p align="center">
+  <img src="images/dependent_countplot.png" width="45%" />
+  <img src="images/dependent-loan.png" width="45%" />
+</p>
+
+
 
 **Education**
 - The Education column is a binary kind of qualitative data. Because there are only two values possible in this feature. They are `Graduated` and `Not Graduated`.
@@ -121,8 +126,12 @@ Image(dependent-loan)
 - About 80% of the applicants are graduates.
 - It seems people who are graduated are more likely to be approved for loan.
 
-Image(education_countplot)
-Image(Education-loan)
+<p align="center">
+  <img src="images/education_countplot.png" width="45%" />
+  <img src="images/education-loan.png" width="45%" />
+</p>
+
+
 
 **Self_Employed**
 - The Self_Employed column is a binary kind of qualitative data. Because there are only two values possible in this feature. They are Self_Employed and Not Self_Employed.
@@ -131,15 +140,23 @@ Image(Education-loan)
 - Nearly 86% percentage of the applicant are not self employed.
 - From the data, It is significant that Self employement doesnot play a huge role in loan approval.
 
-Image(selfemployed_countplot)
-Image(Self_Employed-loan)
+<p align="center">
+  <img src="images/self_employed_countplot.png" width="45%" />
+  <img src="images/selfemployed-loan - Copy - Copy.png" width="45%" />
+</p>
+
+
 
 **Loan_Status**
 - The Loan_Status column is our dependent variable, and is a binary kind of qualitative data. Because there are only two value possible. They are Approved and Declined.
 - The two binary values are `Yes` and `No`.
 - 422(around 69%) people, Out of 614 got Loan aproval. Making this dataset an Imbalanced Dataset.
 
-image(Loan_Status)
+<p align="center">
+  <img src="images/Loan_status.png" width="45%" />
+</p>
+
+
 
 **Applicant_Income**
 - The Applicant Income column is a continuous kind of quantitative data.
@@ -149,16 +166,23 @@ image(Loan_Status)
 - we can also see there are lot of outliers in this data. we will treat them accordingly.
 - It can be inferred that Applicant’s income does not affect the chances of loan approval which contradicts our hypothesis in which we assumed that if the applicant’s income is high the chances of loan approval will also be high.
 
-Image(applicantincome)
-image(ApplicanIncome-loan)
+<p align="center">
+  <img src="images/applicant_income.png" width="45%" height="auto" />
+  <img src="images/Applicantincome-loan.png" width="45%" height="auto" />
+</p>
+
+
 
 **Co_Applicant Income**
 - The Co-applicant Income column is a continuous kind of quantitative data.
 - All the applicantincome provided their Co_Applicant Income.
 - It doesn’t have much effect on our loan status.
 
-Image()
-image(CoapplicantIncome-loan)
+<p align="center">
+  <img src="images/co applicant income- loan.png" width="60%" height="auto" />
+</p>
+
+
 
 **Credit_History**
 - It is a binary kind of qualitative data.
@@ -171,8 +195,11 @@ image(CoapplicantIncome-loan)
 - 84.2% of applicants have Credit_History, meaning they have repaid their debts.
 - It seems people with a credit history of 1 are more likely to get their loans approved. Approving our hypothesis.
 
-Image()
-image(Credit_History-loan)
+<p align="center">
+  <img src="images/credit_history_countplo.png" width="45%" height="auto" />
+  <img src="images/credit_history-loan.png" width="45%" height="auto" />
+</p>
+
 
 **Loan_Amount**
 - The Loan_Amount column is a continuous kind of qualitative data.
@@ -181,19 +208,24 @@ image(Credit_History-loan)
 - we see lot of of outliers and will treat them accordingly.
 - It can be seen that the proportion of approved loans is higher for Low and Average Loan Amounts as compared to that of High Loan Amounts which supports our hypothesis which considered that the chances of loan approval will be high when the loan amount is less.
 
-image(Loan_Amount)
-image(Loan_Amount-loan)
+<p align="center">
+  <img src="images/loan_amount.png" width="45%" height="auto" />
+  <img src="images/loan_amount-loan.png" width="45%" height="auto" />
+</p>
+
 
 
 **Property_Area**
 - The Property_Area column is a ordinal kind of qualitative data.
 - All the applicants given their Property_Area.
-- The ordinal datas present in this column are Urban, Semiurban and Rural.
+- The ordinal datas present in this column are `Urban`, `Semiurban` and `Rural`.
 - Most of the applicants are from semi-urban areas.
 - The proportion of loans getting approved in semi-urban areas is higher as compared to that in rural or urban areas.
 
-image(Property_Area)
-image(Property_Area-Loan)
+<p align="center">
+  <img src="images/propertyaera_countplot.png" width="45%" height="auto" />
+  <img src="images/property_area-loan.png" width="45%" height="auto" />
+</p>
 
 ### Feature Creation.
  
@@ -205,7 +237,11 @@ image(Property_Area-Loan)
 
 ### Test data prediction
 
-image(test data)
+
+<p align="center">
+  <img src="images/test_prediction.png"/>
+
+</p>
 
 
 ## Conclusion
