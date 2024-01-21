@@ -175,7 +175,7 @@ image(Loan_Amount-loan)
 **Property_Area**
 - The Property_Area column is a ordinal kind of qualitative data.
 - All the applicants given their Property_Area.
-- The ordinal datas present in this column are Urban, Semiurban and Rural.
+- The ordinal datas present in this column are `Urban`, `Semiurban` and `Rural`.
 - Most of the applicants are from semi-urban areas.
 - The proportion of loans getting approved in semi-urban areas is higher as compared to that in rural or urban areas.
 
