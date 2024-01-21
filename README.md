@@ -22,8 +22,12 @@
     - [Model Performance](#model-performance)
     - [Test Data Prediction](#test-data-prediction)
  - [Conclusion](#conclusion)
+<<<<<<< HEAD
 
 
+=======
+   
+>>>>>>> 3a52a7cb6aa5cb0ddf5a08a04618cbd3191c46fd
 ## problem statement
 
 Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer’s eligibility for a loan. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling out the online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History, and others. To automate this process, they have given a problem to identify the customer segments, that are eligible for loan amounts so that they can specifically target these customers.
