@@ -19,7 +19,6 @@
     - [About the Dataset](#about-the-dataset)
     - [Data Analysis](#data-analysis)
     - [Feature Creation](#feature-creation)
-    - [Model Performance](#model-performance)
     - [Test Data Prediction](#test-data-prediction)
  - [Conclusion](#conclusion)
    
